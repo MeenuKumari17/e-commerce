@@ -16,7 +16,7 @@ const LoginSignup = () => {
   const login = async () => {
     console.log("Login", formData)
     let responseData;
-    await fetch(`${window.location.origin}/login`,{
+    await fetch('https://e-commerce-s7de.onrender.com/login',{
       method: 'POST',
       headers:{
         Accept: 'application/json',
@@ -39,7 +39,7 @@ const LoginSignup = () => {
   const signup = async () => {
     console.log("SignUp", formData)
     let responseData;
-    await fetch(`${window.location.origin}/signup`,{
+    await fetch('https://e-commerce-s7de.onrender.com/signup',{
       method: 'POST',
       headers:{
         Accept: 'application/json',
