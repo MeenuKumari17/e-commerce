@@ -5,7 +5,7 @@ import Item from '../Item/Item'
 const Popular = () => {
   const [popularProduct, setPopularProduct] = useState([]);
   useEffect(() => {
-    fetch(`${window.location.origin}/popularinwomen`)
+    fetch('http://localhost:4000/popularinwomen')
     .then((response) => response.json())
     .then((data) => setPopularProduct(data));
   }, []);
