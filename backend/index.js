@@ -13,7 +13,13 @@ require('dotenv').config();
 const port = process.env.PORT || 4000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://e-comm-website-1ecomweb.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 // Database connection with mongodb
 mongoose.connect(process.env.MONGOOSE_URL);
